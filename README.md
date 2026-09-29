@@ -24,9 +24,10 @@ tools/              og-image.html + render-assets.mjs to regenerate the PNGs
 
 ## Before launch
 
-- **Waitlist:** set `WAITLIST_ENDPOINT` at the top of `main.js` to an endpoint that accepts
-  `POST {"email": "..."}` as JSON (Formspree, Buttondown, Loops, a Supabase function...).
-  Until then the form says signups aren't connected.
+- **Waitlist:** connected. The form posts `{ email, source }` to the `waitlist` edge
+  function in the PostQuake Supabase project, which writes to `public.waitlist` (RLS on,
+  no anon access). `source` comes from `?ref=` on the landing URL, so links like
+  `https://postquake.app/?ref=overninethousand#access` show where signups came from.
 - **Domain:** `og:image` in `index.html` points at `https://postquake.app/assets/og-image.png`.
   Change it if the site ships on postquake.net instead.
 - **Claims:** the roadmap and "Ship it" step mark scheduling as rolling out. Update the

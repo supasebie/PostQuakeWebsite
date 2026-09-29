@@ -1,8 +1,15 @@
 // PostQuake marketing site
 
-// Where the early-access form POSTs `{ email }` as JSON (Formspree, Buttondown,
-// Loops, a Supabase function...). Leave empty and the form says it isn't connected.
-const WAITLIST_ENDPOINT = "";
+// Where the early-access form POSTs `{ email, source }` as JSON: the `waitlist` edge
+// function in the PostQuake Supabase project, which writes to public.waitlist.
+// Leave empty and the form says it isn't connected.
+const WAITLIST_ENDPOINT = "https://ogbsbyorhywqjwlotvjc.supabase.co/functions/v1/waitlist";
+// Supabase's public anon key. It is meant to ship in client code: it only gets past the
+// function gateway, and the anon role has no access to the waitlist table itself.
+const WAITLIST_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9nYnNieW9yaHl3cWp3bG90dmpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA2ODU5NTUsImV4cCI6MjEwNjI2MTk1NX0.8ZhSP7kO9rN80UOhVH4G4wo4L7Uy4W86pO5YvQSaXL8";
+// Where a signup came from, from ?ref= on the landing URL (e.g. ?ref=overninethousand).
+const WAITLIST_SOURCE = new URLSearchParams(location.search).get("ref");
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -347,8 +354,12 @@ form.addEventListener("submit", async (ev) => {
   try {
     const res = await fetch(WAITLIST_ENDPOINT, {
       method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify({ email }),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        Authorization: `Bearer ${WAITLIST_KEY}`,
+      },
+      body: JSON.stringify({ email, source: WAITLIST_SOURCE }),
     });
     if (!res.ok) throw new Error(String(res.status));
     form.reset();
