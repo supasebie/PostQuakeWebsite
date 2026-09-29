@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-label="PostQuake app icon">
+  <!-- Full-bleed square for App Store / Play / social avatars; platforms apply their own corner mask. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF8A1F"/>
+      <stop offset=".5" stop-color="#FF3D3D"/>
+      <stop offset="1" stop-color="#E81F86"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="576" cy="300" r="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#5a0a2a" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect width="1024" height="1024" fill="url(#glow)"/>
+  <g fill="none" stroke="#fff" stroke-opacity=".16" stroke-width="6">
+    <circle cx="576" cy="192" r="120"/>
+    <circle cx="576" cy="192" r="220"/>
+    <circle cx="576" cy="192" r="330"/>
+  </g>
+  <path filter="url(#shadow)" d="M128 544H272L352 432L464 768L576 192L672 672L736 544H896" fill="none" stroke="#fff" stroke-width="80" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

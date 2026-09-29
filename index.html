@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PostQuake: Posts that shake the feed</title>
+  <meta name="description" content="Paste your App Store, Google Play or website link. PostQuake researches your customers, writes the hooks, and renders a week of TikTok-style slideshows and videos for TikTok, Reels, Shorts and Facebook." />
+  <meta name="theme-color" content="#0b0a0f" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/logo/postquake-app-icon-180.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PostQuake" />
+  <meta property="og:title" content="PostQuake: Posts that shake the feed" />
+  <meta property="og:description" content="From an app link to a week of ready-to-post slideshows and videos." />
+  <meta property="og:image" content="https://postquake.app/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- SVG symbols reused across the page -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="pq-grad" x1="6" y1="4" x2="58" y2="62" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#FF7A1A" />
+        <stop offset=".55" stop-color="#FF3D3D" />
+        <stop offset="1" stop-color="#F0247F" />
+      </linearGradient>
+      <symbol id="pq-mark" viewBox="0 0 64 64">
+        <rect width="64" height="64" rx="15" fill="url(#pq-grad)" />
+        <path d="M8 34H17L22 27L29 48L36 12L42 42L46 34H56" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="nav" id="nav">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="PostQuake home">
+        <svg aria-hidden="true"><use href="#pq-mark" /></svg>
+        PostQuake
+      </a>
+      <ul class="nav-links">
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#output">Output</a></li>
+        <li><a href="#formats">Formats</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#cost">Cost</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a class="btn btn-hot btn-sm" href="#access">Get early access</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="wrap">
+        <div>
+          <a class="pill" href="#how"><b>Early access</b> Works with Claude Code, Codex &amp; Cursor</a>
+          <h1>Posts that <span class="shake hot">shake</span> the feed.</h1>
+          <p class="lede">
+            Paste your app's store link. PostQuake works out who it's for, writes hooks in
+            <strong>your customers' own words</strong>, and renders a week of TikTok-style
+            slideshows and videos, ready for TikTok, Reels, Shorts and Facebook.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-hot" href="#access">Get early access <span class="arrow">→</span></a>
+            <a class="btn btn-ghost" href="#output">See real output</a>
+          </div>
+          <ul class="hero-facts">
+            <li>App Store, Play or website</li>
+            <li>1080×1920 slides + MP4</li>
+            <li>AI labels handled for you</li>
+          </ul>
+        </div>
+
+        <div class="stage" aria-label="Example slideshow made by PostQuake">
+          <div class="card-tilt card-left" aria-hidden="true">
+            <img src="assets/showcase/li-02.webp" alt="" loading="eager" />
+          </div>
+          <div class="card-tilt card-right" aria-hidden="true">
+            <img src="assets/showcase/ba-02.webp" alt="" loading="eager" />
+          </div>
+
+          <div class="phone" data-player="hero">
+            <div class="screen">
+              <div class="progress" aria-hidden="true"></div>
+              <div class="slides">
+                <img src="assets/showcase/pt-01.webp" alt="Slide 1: everyone in my group chat thinks they're psychic" />
+                <img src="assets/showcase/pt-02.webp" alt="Slide 2: so we found an actual ESP test. 25 hidden cards, 5 symbols" />
+                <img src="assets/showcase/pt-03.webp" alt="Slide 3: pure chance gets you about 5 right. beat that and you get bragging rights" />
+                <img src="assets/showcase/pt-04.webp" alt="Slide 4: it's a game called Psychic Tournament, over an app screenshot" />
+                <img src="assets/showcase/pt-05.webp" alt="Slide 5: Psychic Tournament store card, free on iOS and Android" />
+              </div>
+              <div class="rail" aria-hidden="true">
+                <span><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9.2C.8 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.1 4.2 2.4.6-1.3 2.1-2.4 4.2-2.4 3.8 0 6 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg></span>
+                <span><svg viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.9 2 11.7c0 2.4 1.1 4.6 3 6.2L4 22l4.6-2.3c1.1.3 2.2.5 3.4.5 5.5 0 10-3.9 10-8.6S17.5 3 12 3z"/></svg></span>
+                <span><svg viewBox="0 0 24 24"><path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4.5L5 22V3a1 1 0 0 1 1-1z"/></svg></span>
+                <span><svg viewBox="0 0 24 24"><path d="M14 4l8 7.5-8 7.5v-4.6C8 14.4 4.4 16.2 2 20c.8-6 4.3-10.4 12-11.4V4z"/></svg></span>
+              </div>
+              <div class="feed-ui" aria-hidden="true">
+                <b>Psychic Tournament</b>
+                settling the "who's actually psychic" debate once and for all. how many would you get?
+                <div class="tags">#psychic #esptest #intuition</div>
+                <span class="ai">AI-generated</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chip chip-1"><span class="dot"></span> Hook validated <small>· unique in batch</small></div>
+          <div class="chip chip-2"><span class="dot warn"></span> AI label applied</div>
+          <div class="chip chip-3"><span class="dot hot"></span> 5 slides · MP4 · licensed music</div>
+        </div>
+      </div>
+
+      <div class="seismo" aria-hidden="true">
+        <div class="base"></div>
+        <svg id="seismo" viewBox="0 0 2400 150" preserveAspectRatio="none"></svg>
+      </div>
+    </section>
+
+    <!-- ================= PLATFORMS ================= -->
+    <div class="platforms">
+      <div class="wrap">
+        <span class="label">Made for</span>
+        <span class="p">TikTok</span>
+        <span class="p">Instagram Reels</span>
+        <span class="p">YouTube Shorts</span>
+        <span class="p">Facebook</span>
+      </div>
+    </div>
+
+    <!-- ================= PROBLEM ================= -->
+    <section class="problem">
+      <div class="wrap">
+        <p class="eyebrow reveal">The problem</p>
+        <h2 class="reveal" style="margin-top:22px">You shipped the app in a weekend. <span>Marketing it takes every single day.</span></h2>
+
+        <div class="pain-grid">
+          <article class="pain reveal">
+            <span class="n">01</span>
+            <h3>The feed rewards volume</h3>
+            <p>Short-form video is the cheapest way to get discovered, but it pays out to people who post often, for weeks, without running dry.</p>
+          </article>
+          <article class="pain reveal">
+            <span class="n">02</span>
+            <h3>Every post is six jobs</h3>
+            <p>Before anything goes live, someone has to do all of this, for every platform and every account.</p>
+            <div class="jobs"><span>Angle</span><span>Copy</span><span>Images</span><span>Video</span><span>Caption</span><span>Schedule</span></div>
+          </article>
+          <article class="pain reveal">
+            <span class="n">03</span>
+            <h3>Momentum dies in week two</h3>
+            <p>Developers post for a few days, get pulled back into the product, and start from zero next month.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW ================= -->
+    <section class="how" id="how">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">How it works</p>
+          <h2>From one link to a <span class="hot">week of posts.</span></h2>
+          <p>Your coding agent does the thinking. PostQuake's engine does everything that has to be exact: importing, validating, rendering and scheduling.</p>
+        </div>
+
+        <div class="how-grid">
+          <ol class="steps" id="steps">
+            <li class="step active" data-step="0">
+              <span class="num">01</span>
+              <div>
+                <h3>Import your app</h3>
+                <p>Paste an App Store, Google Play or website link. PostQuake pulls the name, pitch, icon, screenshots and brand colours, and follows a website's links to both stores.</p>
+              </div>
+            </li>
+            <li class="step" data-step="1">
+              <span class="num">02</span>
+              <div>
+                <h3>Learn who it's for</h3>
+                <p>A one-time, ten-question interview, then research into real reviews and forums. The result is a customer profile written in their words, with every quote sourced. Nothing is made up.</p>
+              </div>
+            </li>
+            <li class="step" data-step="2">
+              <span class="num">03</span>
+              <div>
+                <h3>Write, check, render</h3>
+                <p>Pick formats and a count. Every hook, slide and caption is written for that customer, checked against the format rules and the rest of the batch, then rendered to 1080×1920 slides and an MP4.</p>
+              </div>
+            </li>
+            <li class="step" data-step="3">
+              <span class="num">04</span>
+              <div>
+                <h3>Ship it <span class="tag">Rolling out</span></h3>
+                <p>Export a zip with a posting manifest, or schedule across TikTok, Reels, Shorts and Facebook Pages through Postiz, with a dry run you approve first.</p>
+              </div>
+            </li>
+          </ol>
+
+          <div>
+            <div class="terminal" aria-label="Example agent session">
+              <div class="bar"><i></i><i></i><i></i><span>claude · postquake</span></div>
+              <pre id="term"></pre>
+            </div>
+            <div class="agents">Drive it from <span>Claude Code</span><span>Codex</span><span>Cursor</span> or the <span>CLI</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OUTPUT ================= -->
+    <section class="output" id="output">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Real output</p>
+          <h2>Not a mockup. <span class="hot">An actual set.</span></h2>
+          <p>This is a real PostQuake set for Psychic Tournament, our own iOS and Android game and our first customer. Tap a slide to jump to it.</p>
+        </div>
+
+        <div class="output-grid">
+          <div class="phone reveal" data-player="output">
+            <div class="screen">
+              <div class="progress" aria-hidden="true"></div>
+              <div class="slides">
+                <img src="assets/showcase/pt-01.webp" alt="Hook slide: everyone in my group chat thinks they're psychic" loading="lazy" />
+                <img src="assets/showcase/pt-02.webp" alt="Story slide: so we found an actual ESP test. 25 hidden cards, 5 symbols" loading="lazy" />
+                <img src="assets/showcase/pt-03.webp" alt="Story slide: pure chance gets you about 5 right. beat that and you get bragging rights" loading="lazy" />
+                <img src="assets/showcase/pt-04.webp" alt="App slide: it's a game called Psychic Tournament" loading="lazy" />
+                <img src="assets/showcase/pt-05.webp" alt="Store card: Psychic Tournament, free on iOS and Android" loading="lazy" />
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <ul class="breakdown" id="breakdown">
+              <li><button type="button" data-go="0"><span class="role">Hook</span><span class="txt">everyone in my group chat thinks they're psychic</span></button></li>
+              <li><button type="button" data-go="1"><span class="role">Story</span><span class="txt">so we found an actual ESP test. <em>25 hidden cards, 5 symbols</em></span></button></li>
+              <li><button type="button" data-go="2"><span class="role">Story</span><span class="txt">pure chance gets you about 5 right. <em>beat that and you get bragging rights</em></span></button></li>
+              <li><button type="button" data-go="3"><span class="role">App</span><span class="txt">it's a game called Psychic Tournament <em>(real screenshot)</em></span></button></li>
+              <li><button type="button" data-go="4"><span class="role">Card</span><span class="txt">Store card <em>built from the real icon, name and CTA</em></span></button></li>
+            </ul>
+
+            <dl class="meta-row">
+              <div class="meta"><dt>Format</dt><dd>hook-story-card</dd></div>
+              <div class="meta"><dt>Angle</dt><dd>Group-chat bragging rights</dd></div>
+              <div class="meta"><dt>AI imagery</dt><dd>Yes, labelled</dd></div>
+            </dl>
+
+            <p class="honest">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+              <span>The photos in this set are AI-generated, so PostQuake marks it for an AI label when it's published. Swap in your own photos and the label goes away. See <a href="#why">how that works</a>.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FORMATS ================= -->
+    <section id="formats">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Formats</p>
+          <h2>Slideshow formats <span class="hot">the feed already rewards.</span></h2>
+          <p>Each format carries its own writing guide, slide roles, text limits and image style, so every set comes out on-pattern without you writing any rules. The slides in the first three cards are real PostQuake output.</p>
+        </div>
+
+        <div class="formats-grid">
+          <article class="format reveal">
+            <div class="preview" aria-hidden="true">
+              <div class="mini photo" style="background-image:url(assets/showcase/pt-01.webp)"></div>
+              <div class="mini photo" style="background-image:url(assets/showcase/pt-03.webp)"></div>
+              <div class="mini photo" style="background-image:url(assets/showcase/pt-05.webp)"></div>
+            </div>
+            <div class="body">
+              <h3>Hook → Story → Card</h3>
+              <p>A relatable hook, a short story over two or three slides, then the app.</p>
+              <div class="seq">hook · story ×2–3 · app · card</div>
+            </div>
+          </article>
+
+          <article class="format reveal">
+            <div class="preview" aria-hidden="true">
+              <div class="mini photo" style="background-image:url(assets/showcase/li-01.webp)"></div>
+              <div class="mini photo" style="background-image:url(assets/showcase/li-02.webp)"></div>
+              <div class="mini photo" style="background-image:url(assets/showcase/li-04.webp)"></div>
+            </div>
+            <div class="body">
+              <h3>Listicle</h3>
+              <p>"N things…" people save and send to a friend. The app shows up as the last item, never as a hard sell.</p>
+              <div class="seq">hook · item ×3–4 · app? · card</div>
+            </div>
+          </article>
+
+          <article class="format reveal">
+            <div class="preview" aria-hidden="true">
+              <div class="mini photo" style="background-image:url(assets/showcase/ba-01.webp)"></div>
+              <div class="mini photo" style="background-image:url(assets/showcase/ba-02.webp)"></div>
+              <div class="mini photo" style="background-image:url(assets/showcase/ba-03.webp)"></div>
+            </div>
+            <div class="body">
+              <h3>Before / After</h3>
+              <p>A pain, a turning point, and a result, often told through a mocked chat that's clearly labelled as a dramatization.</p>
+              <div class="seq">pain · turn · result · card</div>
+            </div>
+          </article>
+
+          <article class="format reveal">
+            <div class="preview" aria-hidden="true">
+              <div class="mini notif">
+                <div class="n"><b>Messages</b>ok how did you get 9/25</div>
+                <div class="n"><b>Messages</b>rematch. tonight.</div>
+              </div>
+              <div class="mini chat">
+                <span class="b me">guess my card</span>
+                <span class="b">star?</span>
+                <span class="b me">HOW</span>
+                <span class="drama">dramatization</span>
+              </div>
+              <div class="mini notif">
+                <div class="n"><b>Reminder</b>daily round is live</div>
+              </div>
+            </div>
+            <div class="body">
+              <h3>Mock phone screens</h3>
+              <p>Chats and notifications rendered in HTML, so they cost nothing to make. They're always labelled as staged, never passed off as real users.</p>
+              <div class="seq">$0 · rendered locally</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY ================= -->
+    <section id="why" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Why PostQuake</p>
+          <h2>Built to get posted, <span class="hot">and keep your accounts healthy.</span></h2>
+          <p>Pumping out slideshows is the easy part. The hard part is doing it every week without repeating yourself, getting flagged, or making claims you can't back up.</p>
+        </div>
+
+        <div class="feat-grid">
+          <article class="feat wide reveal">
+            <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7"/><path d="M16 16l2 2 4-4"/></svg></div>
+            <h3>Never posts the same thing twice</h3>
+            <p>Every set is checked against its format and the rest of the batch before anything renders. Duplicate hooks and captions are rejected, and near-duplicates are flagged.</p>
+            <div class="validator" aria-hidden="true">
+              <div><span class="k ok">✓</span><span>friends-psychic-test · 5 slides · caption 88/150</span></div>
+              <div><span class="k no">✕</span><span>listicle-02 · hook says "5 signs", has 4 items</span></div>
+              <div><span class="k w">!</span><span>before-after-01 · caption close to hook-story-03</span></div>
+            </div>
+          </article>
+
+          <article class="feat wide reveal">
+            <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg></div>
+            <h3>Your own photos, no AI label</h3>
+            <p>Drop in your own photos or licensed stock and record where each came from. Sets built only from them post without an AI label. Sets with AI imagery are labelled automatically, and provenance is never stripped.</p>
+            <div class="label-demo" aria-hidden="true">
+              <div><b>Set A</b>2 AI images + screenshot<br><span class="res ai">AI label applied</span></div>
+              <div><b>Set B</b>Your photos + screenshot<br><span class="res clean">No label needed</span></div>
+            </div>
+          </article>
+
+          <article class="feat reveal">
+            <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v18M17 7H9.5a3 3 0 0 0 0 6h5a3 3 0 0 1 0 6H6"/></svg></div>
+            <h3>Pennies per post</h3>
+            <p>About $0.10 per AI image on your own Gemini key. Images are cached, so re-renders are free, and every paid call is logged.</p>
+          </article>
+
+          <article class="feat reveal">
+            <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+            <h3>Licensed music only</h3>
+            <p>Videos only use tracks with a recorded licence. Anything else is refused before it can get you muted or struck.</p>
+          </article>
+
+          <article class="feat reveal">
+            <div class="ico"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M6 17h12M15 7v6"/></svg></div>
+            <h3>Safe-zone aware</h3>
+            <p>Text stays out of the bottom caption area and the right-hand button rail on TikTok and Reels, and it auto-fits.</p>
+          </article>
+
+          <article class="feat reveal">
+            <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.8H20l-4.9 3.6 1.9 5.8L12 14.6l-5 3.6 1.9-5.8L4 8.8h6.1z"/></svg></div>
+            <h3>No fake testimonials</h3>
+            <p>Customer quotes have to be real and sourced. Staged chats say "dramatization" right on the slide. That keeps you on the right side of endorsement rules.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ROADMAP ================= -->
+    <section id="roadmap" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Roadmap</p>
+          <h2>Today it makes the posts. <span class="hot">Next, it learns which ones hit.</span></h2>
+          <p>We're upfront about what ships today and what's still coming. Here's where each piece stands.</p>
+        </div>
+
+        <div class="road-grid">
+          <div class="col now reveal">
+            <header><h3>Now</h3><span class="tag ok">Shipping</span></header>
+            <ul>
+              <li><span><b>App import</b> from App Store, Play or website</span></li>
+              <li><span><b>Customer research</b> in real customers' words</span></li>
+              <li><span><b>3 formats</b> plus mock chat &amp; notification screens</span></li>
+              <li><span><b>AI images</b> with cache and cost log</span></li>
+              <li><span><b>Photo library</b> for label-free sets</span></li>
+              <li><span><b>Validator</b> with anti-repetition checks</span></li>
+              <li><span><b>Slides + MP4</b> with licensed music</span></li>
+              <li><span><b>MCP server + CLI</b> for any coding agent</span></li>
+            </ul>
+          </div>
+          <div class="col next reveal">
+            <header><h3>Next</h3><span class="tag">In progress</span></header>
+            <ul>
+              <li><span><b>Export &amp; scheduling</b> across TikTok, Reels, Shorts, Facebook</span></li>
+              <li><span><b>Web app</b> so you don't need a terminal</span></li>
+              <li><span><b>Magnitude</b>: a performance score for every post</span></li>
+              <li><span><b>Aftershocks</b>: follow-up posts built on a winning format</span></li>
+              <li><span><b>Hook A/B variants</b></span></li>
+              <li><span><b>Install attribution</b> per post</span></li>
+              <li><span><b>Brand kit</b> and image-model choice</span></li>
+            </ul>
+          </div>
+          <div class="col reveal">
+            <header><h3>Later</h3><span class="tag soon">Planned</span></header>
+            <ul>
+              <li><span><b>Trend finder</b> for formats that are working now</span></li>
+              <li><span><b>Format cloner</b> from a slideshow you like</span></li>
+              <li><span><b>Screen-recorded demos</b> of your real app</span></li>
+              <li><span><b>Voiceover</b> and text-video formats</span></li>
+              <li><span><b>More platforms</b>: Pinterest, LinkedIn, X, Threads</span></li>
+              <li><span><b>Localization</b> and multi-client workspaces</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="seis-card reveal">
+          <div>
+            <p class="eyebrow">Coming with the web app</p>
+            <h3 style="font-size:30px;margin-top:14px">The Seismograph</h3>
+            <p>Every post gets a Magnitude score for how hard it shook the feed. The ones that land get Aftershocks: fresh posts that reuse the winning format with new angles.</p>
+            <dl>
+              <div><dt>Magnitude</dt> <dd>views, saves, shares and installs rolled into one score</dd></div>
+              <div><dt>Aftershocks</dt> <dd>more posts like your winners</dd></div>
+            </dl>
+          </div>
+          <div class="seis-chart">
+            <span class="tag soon preview-tag">Preview</span>
+            <svg id="seis-chart" viewBox="0 0 640 260" role="img" aria-label="Preview of the Seismograph view: a line of post performance over two weeks with one large spike"></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COST ================= -->
+    <section class="cost" id="cost">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Running cost</p>
+          <h2>See what a month costs <span class="hot">before you start.</span></h2>
+          <p>You bring your own Gemini key and pay Google directly for images, with no markup. Slides, videos, mock screens and store cards all render on your machine for free.</p>
+        </div>
+
+        <div class="cost-card reveal">
+          <div class="cost-inputs">
+            <div class="range">
+              <label for="ppw">Posts per week <output id="ppw-out">7</output></label>
+              <input type="range" id="ppw" min="1" max="35" value="7" />
+              <small>One set becomes a slideshow and a video, on every platform you post to.</small>
+            </div>
+            <div class="range">
+              <label for="ipp">AI images per post <output id="ipp-out">3</output></label>
+              <input type="range" id="ipp" min="0" max="5" value="3" />
+              <small>Set it to 0 if you use your own photos. Screenshots and mock screens are always free.</small>
+            </div>
+          </div>
+          <div class="cost-out" aria-live="polite">
+            <div>
+              <p class="eyebrow">Estimated image spend</p>
+              <div class="big" style="margin-top:14px"><span id="cost-month">$9.10</span> <small>/ month</small></div>
+            </div>
+            <dl class="cost-lines">
+              <div><dt>Posts per month</dt><dd id="c-posts">30</dd></div>
+              <div><dt>AI images per month</dt><dd id="c-imgs">91</dd></div>
+              <div><dt>Per post</dt><dd id="c-per">$0.30</dd></div>
+              <div><dt>Re-renders</dt><dd>$0 (cached)</dd></div>
+            </dl>
+            <p class="fine">Based on about $0.10 per image (Gemini image model at 2K) and 4.33 weeks per month. Google's pricing may change.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ACCESS ================= -->
+    <section class="access" id="access">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="wrap" style="position:relative">
+        <p class="eyebrow">Early access</p>
+        <h2>Stop making posts. <span class="hot">Start making waves.</span></h2>
+        <p class="sub">We're letting app makers in a few at a time while we dogfood PostQuake on our own game. Join the list and we'll send your invite.</p>
+
+        <form class="signup" id="signup" novalidate>
+          <label class="sr-only" for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@yourapp.com" autocomplete="email" required />
+          <button class="btn btn-hot" type="submit">Join the list <span class="arrow">→</span></button>
+        </form>
+        <p class="signup-note" id="signup-note" role="status">No spam. Just your invite and big releases.</p>
+
+        <ul class="perks">
+          <li>New builds as they land</li>
+          <li>A direct line to the team</li>
+          <li>A say in which formats come next</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section id="faq" style="padding-top:0">
+      <div class="wrap faq-grid">
+        <div class="section-head reveal" style="margin:0">
+          <p class="eyebrow">FAQ</p>
+          <h2>Questions, <span class="hot">answered.</span></h2>
+          <p>Still curious? Find us <a href="https://www.tiktok.com/@postquake" rel="noopener">@postquake</a> on TikTok.</p>
+        </div>
+
+        <div class="faq-list reveal">
+          <details>
+            <summary>Do I need to be a developer?</summary>
+            <p>Today PostQuake runs through a coding agent like Claude Code, Codex or Cursor. You talk to the agent in plain English and it drives PostQuake for you, but you'll need to be comfortable opening one. A web app that anyone can use is next on the roadmap.</p>
+          </details>
+          <details>
+            <summary>What does it cost to run?</summary>
+            <p>AI images cost about $0.10 each on your own Gemini key, paid straight to Google. Everything else (slides, videos, mock screens, store cards) renders locally for free, and cached images cost nothing to re-render. Use the <a href="#cost">calculator</a> for your numbers.</p>
+          </details>
+          <details>
+            <summary>Will my posts be labelled as AI?</summary>
+            <p>Only the sets that contain AI-generated imagery, and those are labelled automatically wherever the platform asks. Sets built from your own photos or licensed stock, screenshots and rendered screens carry no label. PostQuake never strips or hides AI provenance.</p>
+          </details>
+          <details>
+            <summary>Which platforms does it post to?</summary>
+            <p>TikTok (photo slideshow or video), Instagram Reels, Facebook Page video and YouTube Shorts. Scheduling goes through Postiz, and you can always export a zip with a posting manifest and post by hand.</p>
+          </details>
+          <details>
+            <summary>Won't all the posts look the same?</summary>
+            <p>Every set gets its own angle. Across a batch, PostQuake varies the hook style, first word, screenshot, setting and caption, and the validator rejects duplicate hooks or captions before anything renders.</p>
+          </details>
+          <details>
+            <summary>Is the music safe to use?</summary>
+            <p>PostQuake only uses tracks with a recorded licence and refuses anything else. Note that TikTok business accounts are limited to TikTok's Commercial Music Library.</p>
+          </details>
+          <details>
+            <summary>Can it write fake reviews or testimonials?</summary>
+            <p>No. Customer quotes have to be real and sourced. Mocked chats and notifications are dramatizations, labelled on the slide, and they're never presented as real users or results.</p>
+          </details>
+          <details>
+            <summary>Who's behind PostQuake?</summary>
+            <p>An indie app team that built PostQuake to market our own game, Psychic Tournament, and kept going. Every feature gets tested on our own accounts before it reaches yours.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <a class="brand" href="#top" aria-label="PostQuake home">
+            <svg aria-hidden="true"><use href="#pq-mark" /></svg>
+            PostQuake
+          </a>
+          <p>From an app link to a week of ready-to-post slideshows and videos.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#formats">Formats</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#cost">Cost</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="brand.html">Brand kit</a></li>
+            <li><a href="#access">Early access</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="https://www.tiktok.com/@postquake" rel="noopener">TikTok</a></li>
+            <li><a href="https://www.instagram.com/postquakeapp" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.youtube.com/@postquake" rel="noopener">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© 2026 PostQuake</span>
+        <span>TikTok, Instagram, YouTube and Facebook are trademarks of their respective owners.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

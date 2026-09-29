@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Inter:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    html, body { margin: 0; }
+    body {
+      width: 1200px; height: 630px; overflow: hidden; position: relative;
+      background:
+        radial-gradient(45% 70% at 82% 40%, rgba(255, 61, 61, .35), transparent 70%),
+        radial-gradient(35% 50% at 95% 10%, rgba(240, 36, 127, .3), transparent 70%),
+        #0b0a0f;
+      color: #f6f3ee; font-family: Inter, sans-serif;
+    }
+    .grid {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(60% 80% at 75% 40%, #000, transparent 80%);
+    }
+    .logo { position: absolute; top: 64px; left: 72px; height: 64px; }
+    h1 {
+      position: absolute; left: 72px; top: 190px; margin: 0; width: 640px;
+      font: 800 96px/.94 "Bricolage Grotesque", sans-serif; letter-spacing: -.045em;
+    }
+    h1 span { background: linear-gradient(115deg, #FF7A1A, #FF3D3D 55%, #F0247F); -webkit-background-clip: text; color: transparent; }
+    p { position: absolute; left: 72px; bottom: 70px; margin: 0; font-size: 26px; color: #a39faa; width: 600px; }
+    .phones { position: absolute; right: 60px; top: 60px; width: 440px; height: 600px; }
+    .phones img { position: absolute; width: 230px; border-radius: 26px; box-shadow: 0 0 0 1px rgba(255,255,255,.14), 0 40px 80px -20px #000; }
+    .a { left: 0; top: 70px; transform: rotate(-8deg); }
+    .c { right: 0; top: 70px; transform: rotate(8deg); }
+    .b { left: 105px; top: 20px; width: 250px !important; z-index: 2; box-shadow: 0 0 0 8px #16151c, 0 0 0 9px rgba(255,255,255,.14), 0 40px 90px -10px rgba(255,61,61,.5) !important; }
+    svg.wave { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 90px; opacity: .55; }
+  </style>
+</head>
+<body>
+  <div class="grid"></div>
+  <img class="logo" src="../assets/logo/postquake-wordmark-dark.svg" alt="" />
+  <h1>Posts that <span>shake</span> the feed.</h1>
+  <p>From an app link to a week of ready-to-post slideshows and videos.</p>
+  <div class="phones">
+    <img class="a" src="../assets/showcase/li-02.webp" alt="" />
+    <img class="c" src="../assets/showcase/ba-02.webp" alt="" />
+    <img class="b" src="../assets/showcase/pt-01.webp" alt="" />
+  </div>
+</body>
+</html>

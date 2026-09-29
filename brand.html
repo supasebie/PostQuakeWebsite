@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PostQuake Brand Kit</title>
+  <meta name="description" content="PostQuake logos, colours, type and usage rules." />
+  <meta name="theme-color" content="#0b0a0f" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .kit { padding: 130px 0 100px; }
+    .kit h1 { font-size: clamp(48px, 7vw, 88px); margin: 20px 0 16px; }
+    .kit .intro { color: var(--muted); font-size: 19px; max-width: 640px; }
+    .kit h2 { font-size: 34px; margin: 80px 0 8px; }
+    .kit h2 + p { color: var(--muted); margin-bottom: 26px; max-width: 640px; }
+    .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); grid-auto-flow: dense; gap: 16px; }
+    .tile { border-radius: var(--radius); overflow: hidden; box-shadow: inset 0 0 0 1px var(--line); background: var(--ink-2); display: flex; flex-direction: column; }
+    .tile .art { height: 220px; display: grid; place-items: center; padding: 28px; }
+    .tile .art.light { background: #f6f3ee; color: #0e0d12; }
+    .tile .art.dark { background: #0b0a0f; }
+    .tile .art.hot { background: var(--grad); color: #fff; }
+    .tile .art.check { background: repeating-conic-gradient(#1a1922 0 25%, #121118 0 50%) 0 0 / 20px 20px; }
+    .tile .art img { max-height: 100%; }
+    .tile .cap { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 18px; border-top: 1px solid var(--line); font-size: 14.5px; }
+    .tile .cap a { color: var(--muted); font-size: 13px; font-family: var(--mono); text-decoration: none; }
+    .tile .cap a:hover { color: var(--text); }
+    .wide-tile { grid-column: span 2; }
+    .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+    .sw { border-radius: 16px; overflow: hidden; box-shadow: inset 0 0 0 1px var(--line); background: var(--ink-2); }
+    .sw .c { height: 110px; }
+    .sw .i { padding: 12px 14px; font-size: 14px; }
+    .sw .i b { display: block; }
+    .sw .i code { font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+    .type { display: grid; gap: 12px; }
+    .type div { padding: 24px 26px; border-radius: var(--radius); background: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line); display: flex; justify-content: space-between; align-items: baseline; gap: 20px; flex-wrap: wrap; }
+    .type small { color: var(--muted); font-family: var(--mono); font-size: 12.5px; }
+    .rules { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .rules > div { padding: 26px; border-radius: var(--radius); background: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line); }
+    .rules h3 { font-size: 19px; margin-bottom: 12px; }
+    .rules ul { margin: 0; padding-left: 18px; color: var(--muted); display: grid; gap: 8px; font-size: 15.5px; }
+    .sizes { display: flex; align-items: end; gap: 28px; flex-wrap: wrap; }
+    .sizes figure { margin: 0; display: grid; justify-items: center; gap: 10px; color: var(--muted); font: 12px var(--mono); }
+    .mono-demo { color: #f6f3ee; }
+    .mono-demo svg { width: 120px; height: 120px; }
+    @media (max-width: 700px) { .wide-tile { grid-column: auto; } .rules { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="nav scrolled">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="PostQuake home">
+        <img src="assets/logo/postquake-mark.svg" width="34" height="34" alt="" />
+        PostQuake
+      </a>
+      <a class="btn btn-ghost btn-sm" href="index.html">← Back to site</a>
+    </div>
+  </header>
+
+  <main class="kit">
+    <div class="wrap">
+      <p class="eyebrow">Brand kit</p>
+      <h1>The <span class="hot">PostQuake</span> brand</h1>
+      <p class="intro">The mark is a seismograph trace inside a hot tile: a quiet feed line that suddenly spikes. That's what a good post does. Use these files as they are, and don't redraw them.</p>
+
+      <h2>Logos</h2>
+      <p>SVG masters. Use the dark lockup on dark backgrounds and the light lockup on light ones. The mono mark picks up the current text colour.</p>
+      <div class="tiles">
+        <div class="tile wide-tile">
+          <div class="art dark"><img src="assets/logo/postquake-wordmark-dark.svg" alt="PostQuake lockup for dark backgrounds" style="width:360px" /></div>
+          <div class="cap">Lockup, dark <a href="assets/logo/postquake-wordmark-dark.svg" download>SVG ↓</a></div>
+        </div>
+        <div class="tile">
+          <div class="art check"><img src="assets/logo/postquake-mark.svg" alt="PostQuake mark" style="width:120px" /></div>
+          <div class="cap">Mark <a href="assets/logo/postquake-mark.svg" download>SVG ↓</a></div>
+        </div>
+        <div class="tile wide-tile">
+          <div class="art light"><img src="assets/logo/postquake-wordmark-light.svg" alt="PostQuake lockup for light backgrounds" style="width:360px" /></div>
+          <div class="cap">Lockup, light <a href="assets/logo/postquake-wordmark-light.svg" download>SVG ↓</a></div>
+        </div>
+        <div class="tile">
+          <div class="art dark"><img src="assets/logo/postquake-app-icon.svg" alt="PostQuake app icon" style="width:150px;border-radius:34px" /></div>
+          <div class="cap">App / avatar icon <a href="assets/logo/postquake-app-icon.svg" download>SVG ↓</a></div>
+        </div>
+        <div class="tile">
+          <div class="art dark mono-demo">
+            <svg viewBox="0 0 64 64" aria-label="Mono mark">
+              <mask id="cut"><rect width="64" height="64" fill="#fff"/><path d="M8 34H17L22 27L29 48L36 12L42 42L46 34H56" fill="none" stroke="#000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></mask>
+              <rect width="64" height="64" rx="15" fill="currentColor" mask="url(#cut)"/>
+            </svg>
+          </div>
+          <div class="cap">Mono mark <a href="assets/logo/postquake-mark-mono.svg" download>SVG ↓</a></div>
+        </div>
+        <div class="tile">
+          <div class="art hot"><img src="assets/logo/postquake-wave.svg" alt="" style="width:140px;filter:brightness(0) invert(1)" /></div>
+          <div class="cap">Wave (no tile) <a href="assets/logo/postquake-wave.svg" download>SVG ↓</a></div>
+        </div>
+        <div class="tile">
+          <div class="art light"><img src="assets/logo/postquake-wave.svg" alt="PostQuake wave" style="width:140px" /></div>
+          <div class="cap">Wave on light <a href="assets/logo/postquake-wave.svg" download>SVG ↓</a></div>
+        </div>
+      </div>
+
+      <h2>Small sizes</h2>
+      <p>The trace is simple on purpose: one dip, one drop, one spike, so it still reads at favicon size.</p>
+      <div class="sizes">
+        <figure><img src="assets/logo/postquake-mark.svg" width="96" height="96" alt="" /><figcaption>96</figcaption></figure>
+        <figure><img src="assets/logo/postquake-mark.svg" width="64" height="64" alt="" /><figcaption>64</figcaption></figure>
+        <figure><img src="assets/logo/postquake-mark.svg" width="40" height="40" alt="" /><figcaption>40</figcaption></figure>
+        <figure><img src="assets/logo/postquake-mark.svg" width="24" height="24" alt="" /><figcaption>24</figcaption></figure>
+        <figure><img src="favicon.svg" width="16" height="16" alt="" /><figcaption>16</figcaption></figure>
+      </div>
+
+      <h2>Colour</h2>
+      <p>One hot gradient over near-black ink. The gradient always runs orange → red → magenta, top-left to bottom-right.</p>
+      <div class="swatches">
+        <div class="sw"><div class="c" style="background:#FF7A1A"></div><div class="i"><b>Magma</b><code>#FF7A1A</code></div></div>
+        <div class="sw"><div class="c" style="background:#FF3D3D"></div><div class="i"><b>Quake Red</b><code>#FF3D3D</code></div></div>
+        <div class="sw"><div class="c" style="background:#F0247F"></div><div class="i"><b>Aftershock</b><code>#F0247F</code></div></div>
+        <div class="sw"><div class="c" style="background:var(--grad)"></div><div class="i"><b>Hot gradient</b><code>115° · 0 / 55 / 100%</code></div></div>
+        <div class="sw"><div class="c" style="background:#0B0A0F;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)"></div><div class="i"><b>Ink</b><code>#0B0A0F</code></div></div>
+        <div class="sw"><div class="c" style="background:#1A1922"></div><div class="i"><b>Ink 3</b><code>#1A1922</code></div></div>
+        <div class="sw"><div class="c" style="background:#F6F3EE"></div><div class="i"><b>Paper</b><code>#F6F3EE</code></div></div>
+        <div class="sw"><div class="c" style="background:#3DDC97"></div><div class="i"><b>Signal (UI only)</b><code>#3DDC97</code></div></div>
+      </div>
+
+      <h2>Type</h2>
+      <p>All three are free on Google Fonts under the SIL Open Font License.</p>
+      <div class="type">
+        <div><span style="font:800 48px/1 var(--display);letter-spacing:-.04em">Posts that shake the feed.</span><small>Bricolage Grotesque ExtraBold · headlines, logo</small></div>
+        <div><span style="font:400 20px/1.4 var(--body)">From one link to a week of ready-to-post slideshows.</span><small>Inter · body, UI</small></div>
+        <div><span style="font:500 16px/1.4 var(--mono)">▸ batch_render  7/7 sets ready</span><small>JetBrains Mono · code, labels</small></div>
+      </div>
+
+      <h2>Voice &amp; usage</h2>
+      <p>Energetic, plain-spoken and honest about what ships.</p>
+      <div class="rules">
+        <div>
+          <h3>Do</h3>
+          <ul>
+            <li>Write the name as <b>PostQuake</b>, with a capital P and Q.</li>
+            <li>Lean on the vocabulary: <b>Magnitude</b> (a post's score), <b>Aftershocks</b> (follow-ups to a winner), <b>Seismograph</b> (analytics).</li>
+            <li>Keep at least a quarter of the tile width clear around the mark.</li>
+            <li>Put the gradient tile on ink or paper backgrounds.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Don't</h3>
+          <ul>
+            <li>Joke about, or run campaigns tied to, real earthquakes or disasters.</li>
+            <li>Recolour, stretch, rotate or outline the mark.</li>
+            <li>Put the gradient mark on the gradient. Use the mono or white wave there instead.</li>
+            <li>Write "Postquake", "Post Quake" or "POSTQUAKE" in running text.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

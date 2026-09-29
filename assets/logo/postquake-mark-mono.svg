@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="PostQuake">
+  <!-- Single-colour mark: inherits currentColor. Waveform is knocked out of the tile. -->
+  <mask id="pq-cut">
+    <rect width="64" height="64" fill="#fff"/>
+    <path d="M8 34H17L22 27L29 48L36 12L42 42L46 34H56" fill="none" stroke="#000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </mask>
+  <rect width="64" height="64" rx="15" fill="currentColor" mask="url(#pq-cut)"/>
+</svg>
