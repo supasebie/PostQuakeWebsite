@@ -28,6 +28,10 @@ tools/              og-image.html + render-assets.mjs to regenerate the PNGs
   function in the PostQuake Supabase project, which writes to `public.waitlist` (RLS on,
   no anon access). `source` comes from `?ref=` on the landing URL, so links like
   `https://postquake.app/?ref=overninethousand#access` show where signups came from.
+- **Analytics:** Google Analytics 4, property "PostQuake" (`p556576077`), measurement ID
+  `G-CQE6NMJCCS`, tagged in the `<head>` of `index.html` and `brand.html`. A successful
+  waitlist signup sends a `generate_lead` event with `lead_source` (the `?ref=` value or
+  `direct`), never the email. There is no cookie-consent banner yet.
 - **Domain:** `og:image` in `index.html` points at `https://postquake.app/assets/og-image.png`.
   Change it if the site ships on postquake.net instead.
 - **Claims:** the roadmap and "Ship it" step mark scheduling as rolling out. Update the

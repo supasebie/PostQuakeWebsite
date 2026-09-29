@@ -363,6 +363,8 @@ form.addEventListener("submit", async (ev) => {
     });
     if (!res.ok) throw new Error(String(res.status));
     form.reset();
+    // GA4 recommended event for sign-ups; only the source is sent, never the email.
+    window.gtag?.("event", "generate_lead", { lead_source: WAITLIST_SOURCE ?? "direct" });
     note.className = "signup-note ok";
     note.textContent = "You're on the list. We'll be in touch soon.";
   } catch {
