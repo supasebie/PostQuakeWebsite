@@ -31,7 +31,12 @@ tools/              og-image.html + render-assets.mjs to regenerate the PNGs
 - **Analytics:** Google Analytics 4, property "PostQuake" (`p556576077`), measurement ID
   `G-CQE6NMJCCS`, tagged in the `<head>` of `index.html` and `brand.html`. A successful
   waitlist signup sends a `generate_lead` event with `lead_source` (the `?ref=` value or
-  `direct`), never the email. There is no cookie-consent banner yet.
+  `direct`), never the email.
+- **Cookie consent:** Google Consent Mode v2. Ad storage is always denied (no ads). Analytics
+  cookies are off by default in the EEA, UK and Switzerland and on elsewhere; `consent.js`
+  shows the banner, saves the choice in `localStorage` (`pq-consent`) and deletes `_ga`
+  cookies on decline. "Cookie settings" in the footer reopens it. The site has no privacy
+  policy page yet.
 - **Domain:** `og:image` in `index.html` points at `https://postquake.app/assets/og-image.png`.
   Change it if the site ships on postquake.net instead.
 - **Claims:** the roadmap and "Ship it" step mark scheduling as rolling out. Update the

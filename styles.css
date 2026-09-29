@@ -1873,6 +1873,73 @@ footer {
   color: var(--dim);
 }
 
+/* ---------- Cookie banner ---------- */
+
+.cookie {
+  position: fixed;
+  z-index: 60;
+  left: 20px;
+  bottom: 20px;
+  max-width: 400px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: rgba(22, 21, 29, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 0 0 1px var(--line-2), 0 30px 60px -20px rgba(0, 0, 0, 0.9);
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--muted);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.cookie.in {
+  opacity: 1;
+  transform: none;
+}
+
+.cookie b {
+  color: var(--text);
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.cookie-actions .btn {
+  flex: 1;
+}
+
+.linkish {
+  all: unset;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.linkish:hover {
+  color: var(--text);
+}
+
+.linkish:focus-visible {
+  outline: 2px solid var(--hot-1);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (max-width: 620px) {
+  .cookie {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    max-width: none;
+  }
+}
+
 /* ---------- Reveal ---------- */
 
 .reveal {

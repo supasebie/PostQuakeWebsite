@@ -1,15 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js): GA4 property "PostQuake" (p556576077) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQE6NMJCCS"></script>
+  <meta charset="utf-8" />
+  <!-- Google tag (gtag.js): GA4 property "PostQuake" (p556576077), with Consent Mode v2.
+       consent.js shows the banner and records the visitor's choice. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    // No ads on this site, so ad storage is always denied.
+    gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted' });
+    // EEA, UK and Switzerland: no analytics cookies until the visitor accepts.
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied',
+      region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'],
+      wait_for_update: 500
+    });
+    try {
+      var choice = localStorage.getItem('pq-consent');
+      if (choice === 'granted' || choice === 'denied') gtag('consent', 'update', { analytics_storage: choice });
+    } catch (e) {}
     gtag('js', new Date());
     gtag('config', 'G-CQE6NMJCCS');
   </script>
-  <meta charset="utf-8" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQE6NMJCCS"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PostQuake: Posts that shake the feed</title>
   <meta name="description" content="Paste a link to your app, website, shop or newsletter. PostQuake researches your customers, writes the hooks, and renders a week of TikTok-style slideshows and videos for TikTok, Reels, Shorts and Facebook." />
@@ -620,12 +633,13 @@
         </div>
       </div>
       <div class="legal">
-        <span>© 2026 PostQuake</span>
+        <span>© 2026 PostQuake · <button type="button" class="linkish" data-cookie-settings>Cookie settings</button></span>
         <span>TikTok, Instagram, YouTube and Facebook are trademarks of their respective owners.</span>
       </div>
     </div>
   </footer>
 
   <script src="main.js"></script>
+  <script src="consent.js"></script>
 </body>
 </html>
